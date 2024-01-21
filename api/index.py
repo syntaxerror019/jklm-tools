@@ -29,7 +29,7 @@ def join():
              return jsonify({"done": False, "error": e})
 
 
-@app.route('/test') # Test and see if a room code is valid
+@app.route('/test', methods=['POST']) # Test and see if a room code is valid
 def test_room():
     try:
          endpoint = "https://jklm.fun/api/joinRoom"
