@@ -49,7 +49,7 @@ def create_room():
                             'name' : name,
                             'gameId' : gameId}
           
-          res = requests.post(url = endpoint_create, json = create_data)
+          res = requests.post(url = endpoint_create, json = data)
           
           if res.status_code != 200: 
               return jsonify({"done": False, "error": res.status_code})
