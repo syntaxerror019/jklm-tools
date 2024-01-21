@@ -67,5 +67,5 @@ def create_room():
           code = res.json()['roomCode']
           return jsonify({"done": True, "code": code})
           
-          else:
+      else:
              return jsonify({"done": False, "error": "please specify all valeus"})
