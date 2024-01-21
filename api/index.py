@@ -39,7 +39,7 @@ def create_room():
       name   = json_data.get('name')
       gameId = json_data.get('gameId')
 
-      if token and public and name and gameId:
+      if token is not None and public is not None and name is not None and gameId is not None:
     
           endpoint_create = "https://jklm.fun/api/startRoom"
           
