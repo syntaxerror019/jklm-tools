@@ -25,6 +25,7 @@ def join():
             r = requests.post(url=endpoint, json=data)
             print(r.status_code)
             print(r.json())
+            return "code: " + str(r.status_code) + "<br>json: " + str(r.json())
             joinURL = r.json()['url']
           
             return jsonify({"done": True, "url": joinURL})
