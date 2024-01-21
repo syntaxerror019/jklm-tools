@@ -27,18 +27,7 @@ def join():
             return jsonify({"done": True, "url": joinURL})
       except Exception as e:
              return jsonify({"done": False, "error": e})
-
-
-@app.route('/test', methods=['POST']) # Test and see if a room code is valid
-def test_room():
-    try:
-         endpoint = "https://jklm.fun/api/joinRoom"
-         data = {'roomCode': the_code}
-         r = requests.post(url=endpoint, json=data)
-         return jsonify({"done": True, "url": r.json()['url']})
-    except:
-         return jsonify({"done": True, "url": ""})
-
+          
 
 @app.route('/create', methods=['POST']) # Create a room using requests
 def create_room():
